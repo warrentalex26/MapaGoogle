@@ -10,19 +10,27 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatCardModule} from '@angular/material/card';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
 
 // Google Maps
 import { AgmCoreModule } from '@agm/core';
 
 // Componentes
 import { MapaComponent } from './components/mapa/mapa.component';
+import { MapaEditarComponent } from './components/mapa/mapa-editar.component';
 
 
 
 @NgModule({
+  // Le decimos que el componente MapaEditarComponent puede ser usado como un argumento
+  entryComponents: [
+    MapaEditarComponent
+  ],
   declarations: [
     AppComponent,
-    MapaComponent
+    MapaComponent,
+    MapaEditarComponent
   ],
   imports: [
     AgmCoreModule.forRoot({
@@ -34,7 +42,9 @@ import { MapaComponent } from './components/mapa/mapa.component';
     MatToolbarModule,
     MatProgressBarModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

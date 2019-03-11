@@ -4,7 +4,7 @@
       <strong>{{marcador.titulo}}</strong>
       <p>{{marcador.descripcion}}</p>
       <div>
-        <button style="margin-right: 5px;" mat-raised-button color="primary">Editar</button>
+        <button (click)="editarMarcador(marcador)" style="margin-right: 5px;" mat-raised-button color="primary">Editar</button>
         <button (click)="borrarMarcador(i)" mat-raised-button color="warn">Borrar</button>
       </div>
     </agm-info-window>
