@@ -37,8 +37,13 @@ export class MapaComponent implements OnInit {
     this.guardarStorage();
   }
 
-  // El localstorage solo permite almacenar String
+  borrarMarcador(i) {
+    console.log(i);
+    this.marcadores.splice(i, 1);
+    this.guardarStorage();
+  }
 
+  // El localstorage solo permite almacenar String
   guardarStorage() {
     // Ocupamos el JSON.stringify para guardarlo en el localstorage ya que no es un string puro
     localStorage.setItem('marcadores', JSON.stringify(this.marcadores));
