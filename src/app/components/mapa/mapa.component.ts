@@ -55,6 +55,12 @@ export class MapaComponent implements OnInit {
       width: '250px',
       data: {titulo: marcador.titulo, descripcion: marcador.descripcion}
     });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      console.log(result);
+    });
+    
   }
 
   // El localstorage solo permite almacenar String
