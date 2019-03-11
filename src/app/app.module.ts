@@ -37,7 +37,7 @@ import { MapaEditarComponent } from './components/mapa/mapa-editar.component';
   ],
   imports: [
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyD7PtL8rVmgxJYE68stZcQMdsJMZ0YDF4o'
+      apiKey: 'API_KEY'
     }),
     ReactiveFormsModule,
     BrowserModule,

@@ -7,6 +7,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Proyecto de google Maps creado con angular material, angular-maps y angular 7.
 - Agregar dinamicamente marcadores al mapa.
 - Al recargar la pagina almacenamos los marcadores en el localStorage.
+- Crear una API KEY de google maps y luego pegarla en el app.module.ts en la parte de 
+`AgmCoreModule.forRoot({
+       apiKey: 'API_KEY'
+     }),
+`
 
 ## Development server
 
